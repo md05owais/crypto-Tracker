@@ -1,0 +1,100 @@
+body {
+  /* text-align: center; */
+  background-color: rgb(23, 26, 37);
+  /* position: fixed; */
+}
+input {
+  background-color: blueviolet;
+  /* background-color: linen(l blueviolet, r); */
+  height: 35px;
+  width: 14rem;
+  text-decoration: white;
+}
+header {
+  margin-top: 60px;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
+input::placeholder {
+  color: white;
+  font-size: 8px;
+}
+p {
+  color: white;
+}
+.imageName {
+  width: 100px;
+  word-wrap: break-word;
+}
+.divImage {
+  width: 140px;
+  display: flex;
+  text-align: left;
+}
+img {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 7px;
+  margin-right: 7px;
+}
+.inner-div {
+  display: flex;
+  position: relative;
+  width: 85%;
+  left: 16%;
+  display: sticky;
+}
+.content1 {
+  position: absolute;
+  left: 150px;
+  text-transform: uppercase;
+}
+.content2 {
+  position: absolute;
+  left: 250px;
+}
+.content3 {
+  position: absolute;
+  left: 380px;
+}
+.content4 {
+  position: absolute;
+  left: 530px;
+  display: flex;
+}
+.content5 {
+  position: absolute;
+  left: 650px;
+  /* font-size: 10px; */
+}
+.hr {
+  width: 820px;
+  border: 0.1px solid rgb(219, 211, 211);
+  height: 0px;
+  position: relative;
+  left: -15%;
+  top: 32px;
+  margin: 12px 0px 12px 0px;
+}
+#outer-div {
+  /* width: 70vw; */
+  /* position: relative; */
+  font-size: 14px;
+  /* left: 18%; */
+}
+.hidden {
+  display: none;
+}
+button {
+  background-color: aqua;
+  position: relative;
+  left: 25%;
+  top: 35px;
+  margin-bottom: 45px;
+}
+.outer{
+  display: flex;
+  flex-direction: column-reverse;
+}

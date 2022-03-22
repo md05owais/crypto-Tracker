@@ -125,7 +125,7 @@ const innerTable = function (data, i) {
     priceChangePercentageValue.style.color = "red";
     const priceChangePercentageImage = document.createElement("img");
     priceChangePercentageImage.src =
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy0g4fJ3HbbOZDcSql3_LfjVzG0o4SQ-rnwQ&usqp=CAU";
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8e78u9S6uea1s3Bj6_Q0wwVcx20AlEOcptg&usqp=CAU";
     priceChangePercentageDiv.appendChild(priceChangePercentageImage);
     priceChangePercentageDiv.appendChild(priceChangePercentageValue);
   }

@@ -1,14 +1,22 @@
 body {
   /* text-align: center; */
   background-color: rgb(23, 26, 37);
+  /* background-color: black; */
   /* position: fixed; */
 }
 input {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
+  background-image: linear-gradient(
+    to right,
+    rgb(80, 80, 214),
+    blueviolet,
+    rgb(152, 168, 152)
+  );
   /* background-color: linen(l blueviolet, r); */
   height: 35px;
   width: 14rem;
   text-decoration: white;
+  color: white;
 }
 header {
   margin-top: 60px;
@@ -42,9 +50,9 @@ img {
 .inner-div {
   display: flex;
   position: relative;
-  width: 85%;
-  left: 16%;
-  display: sticky;
+  width: 82%;
+  left: 19%;
+  /* display: sticky; */
 }
 .content1 {
   position: absolute;
@@ -77,6 +85,7 @@ img {
   left: -15%;
   top: 32px;
   margin: 12px 0px 12px 0px;
+  text-align: center;
 }
 #outer-div {
   /* width: 70vw; */
@@ -90,11 +99,11 @@ img {
 button {
   background-color: aqua;
   position: relative;
-  left: 25%;
+  left: 29%;
   top: 35px;
   margin-bottom: 45px;
 }
-.outer{
+.outer {
   display: flex;
   flex-direction: column-reverse;
 }

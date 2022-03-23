@@ -29,24 +29,45 @@ const represent = function (x) {
   });
   return e;
 };
-// console.log(bl);
 
-// display ...............................
+// Search ...............................
+// const serchMethod = function (data) {
+//   const value = document.getElementById("input").value.toLowerCase();
+//   let i = 1;
+//   const n = localStorage.length;
+//   while (i <= n) {
+//     const ke = localStorage.key(i);
+//     const val = localStorage.getItem(ke);
+//     if (value === " ") return;
+//     if (!ke?.toLowerCase()?.includes(value)) {
+//       document.getElementById(val)?.classList.add("hidden");
+//     } else {
+//       document.getElementById(val)?.classList.remove("hidden");
+//     }
+//     i++;
+//   }
+// };
 const serchMethod = function () {
-  const value = document.getElementById("input").value.toLowerCase();
-  let i = 1;
-  const n = localStorage.length;
-  while (i <= n) {
-    const ke = localStorage.key(i);
-    console.log(ke);
-    const val = localStorage.getItem(ke);
+  const userInput = document.getElementById("input").value.toLocaleLowerCase();
+  console.log(userInput);
+  const valueDiv = document.getElementsByClassName("imageName");
+  console.log(valueDiv);
+  let i = 0;
+  let n = valueDiv.length;
+  console.log(n);
+  while (i < n) {
+    const val = valueDiv[i].textContent;
+    const val1 = val.toLowerCase();
     console.log(val);
-    if (value === " ") return;
-    if (!ke?.toLowerCase()?.includes(value)) {
-      console.log(val);
-      document.getElementById(val)?.classList.add("hidden");
+    // const ke = localStorage.key(i);
+
+    // const val = localStorage.getItem(ke);
+
+    if (userInput === " ") return;
+    if (!val1.includes(userInput)) {
+      document.getElementById(`${val}`).classList.add("hidden");
     } else {
-      document.getElementById(val)?.classList.remove("hidden");
+      document.getElementById(`${val}`).classList.remove("hidden");
     }
     i++;
   }
@@ -58,18 +79,10 @@ srch.addEventListener("keyup", serchMethod);
 //display end ...........................................................
 
 const innerElement = document.getElementById("outer-div");
-// console.log(innerElement);
 const innerTable = function (data, i) {
-  //   console.log(data);
   const innerDiv = document.createElement("div");
   innerDiv.className = "inner-div";
-  innerDiv.id = `${data.symbol}-${i}`;
-
-  //local storage......................................................
-
-  localStorage.setItem(data.name, innerDiv.id);
-
-  //local storage ....................................................
+  innerDiv.id = `${data.name}`;
 
   // div for image and name of image......................................
 
@@ -157,9 +170,9 @@ const ourData = fetch(
   })
   .then(function (data) {
     const n = data.length;
-    let i = 1;
-    while (i <= n) {
-      const newData = data[i - 1];
+    let i = 0;
+    while (i < n) {
+      const newData = data[i];
       innerTable(newData, i);
       i++;
     }
